@@ -103,10 +103,10 @@ var displayData = function(data, user) {
     getData();
   });
 };
-
+// this is the function that sends messages to the server
 var postData = function(message, username) {
   $.ajax({
-    url: SERVER_URL,
+    url: 'http://parse.shared.hackreactor.com/chatterbox/classes/messages',
     contentType: 'application/json',
     type: 'POST',
     data: JSON.stringify({
